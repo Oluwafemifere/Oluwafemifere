@@ -1,0 +1,619 @@
+body{
+      margin: 0;
+      font-family: cursive;
+  }
+    /* Set the width and height of the scrollbar */
+  ::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+  
+  }
+    
+    /* Track (the area behind the thumb) */
+  ::-webkit-scrollbar-track {
+      background-color: rgb(242, 242, 242, 0.3);
+     
+  }
+    
+    /* Handle (the draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+      background-color:darkred;
+      border-radius: 6px;
+     
+  }
+    
+    /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background-color: red;
+      box-shadow: 0 0 10px  rgba(85, 85, 85, 0.8);
+      
+  }
+    
+  .container-main {
+        display: grid;
+        grid-template-rows: 15% 10% 68% 7%;
+        height: 800px; 
+  }
+  #bgVid {
+      position:fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: hue-rotate(90deg);
+  }
+      
+  .header {
+        text-align: center;
+        font-size:1.5rem;
+        backface-visibility: visible;
+        color: white;
+        backdrop-filter: grayscale(1);
+        text-shadow: 5px 5px 4px black;
+  }
+      
+  .navbar {
+        backface-visibility: visible;
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0);
+  }  
+  .nav-links a {
+        text-decoration: none;
+        color: white;
+        padding: 15px 20px;
+        transition: color 0.3s ease-in-out;
+        text-shadow: 5px 5px 4px #000000;
+  }
+    
+  .nav-links a:hover {
+        color:#008080;
+  }
+    
+  .activeNav{
+        border-bottom: 3px solid white;
+  }
+  .activeNav:hover{
+        background-color: #008080;
+        color:#6a091c;
+        border-bottom: 3px dashed #6a091c;
+  }
+  .nav-links{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.5rem;
+  }
+  .container{
+        display: grid;
+        grid-template-rows: 5% 90% 5%;
+        grid-template-columns: 5% 90% 5%;
+        height: 100%;
+  }
+  .next-btn{
+      grid-row: 2 / 3;
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .prev-btn{
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .carousel{
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        width: 100%;
+  }
+  .carousel{
+        display: flex;
+        overflow: hidden;
+        transition: transform 1s ease-in-out;
+  }
+  .carousel-item{
+        width: 100%;
+        transition: transform 1s ease-in-out;
+        
+  }
+  .carousel-item{
+        display: grid;
+        grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-columns: 50% 50%;
+  }
+  .image{
+        width: 42.9rem;
+        grid-row: 1 / 7;
+        grid-column: 1 / 2;
+  }
+  .info{
+        width: 42.9rem;
+        grid-row: 1 / 9;
+        grid-column: 2 / 3;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        backface-visibility: visible;
+        backdrop-filter: blur(10px);
+        color: white;
+        text-align: center;
+        text-shadow: 3px 3px 3px black;
+  }
+  .info p{
+      font-size: 1.3rem;
+      padding: 1rem;
+  }
+  .info h1{
+      background-color: rgba(0, 128, 128, 0.5);
+  }
+  .btn{
+        width: 42.9rem;
+        grid-row: 9 / 11;
+        grid-column: 2 / 3;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+  }
+  .footer{
+        text-align: center;
+        background: #222;
+        color: white;
+  }
+  .image{
+      background-size: cover;
+      border-radius: 30px;
+      background-repeat: repeat;
+      filter:saturate(0.2);
+      transition: filter 0.3s ease-in-out;
+  }
+  .image:hover{
+      filter:saturate(1);
+  }
+  .img1{
+      background-image: url(Thumb\ \(1\).png);
+  }
+  .img2{
+      background-image: url(Thumb\ \(2\).png);
+  }
+  .img3{
+      background-image: url(Thumb\ \(3\).png);
+  }
+  .img4{
+      background-image: url(Thumb\ \(4\).png);
+  }
+  .img5{
+      background-image: url(Thumb\ \(5\).png);
+  }
+  .img6{
+      background-image: url(Thumb\ \(6\).png);
+  }
+  .img7{
+      background-image: url(Thumb\ \(7\).png);
+  }
+  .img8{
+      background-image: url(Thumb\ \(8\).png);
+  }
+  .img9{
+      background-image: url(Thumb\ \(9\).png);
+  }
+  .common-btn {
+      width: 100%;
+      height: 100%;
+      font-size: 3rem;
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      backface-visibility: visible;
+      backdrop-filter: blur(10px);
+      color: #008080;
+      background-color: #6a091c;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .common-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #008080, #00FFFF);
+      mix-blend-mode: overlay;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+  }
+  
+  .common-btn:hover {
+      background-color: #008080;
+      color:#6a091c;
+  }
+  
+  .common-btn:hover::before {
+      opacity: 1;
+  }
+  
+  .common-btn:active {
+      transform: scale(0.95);
+  }
+  #next-btn, #prev-btn{
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+  }
+  #next-btn, #prev-btn p{
+      font-size: 4rem;
+      color: white;
+      text-shadow: 5px 5px 3px black;
+      transition: font-size 0.1s ease-in;
+  }
+  #next-btn:hover, #prev-btn:hover p{
+      font-size: 5rem;
+  }
+  #next-btn:active, #prev-btn:active p{
+      color:#000000;
+      text-shadow: 5px 5px 3px white;
+  }
+  @media only screen and (max-width: 1400px) and (min-width:1299px) {
+      .carousel-item{
+      grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+      grid-template-columns: 50% 50%;
+      }
+      .info, .btn, .image{
+            width: 39rem;
+      }
+      .info p{
+            font-size: 18.5px;
+      }
+      .header {
+          font-size: 1.4rem;
+      }
+  
+      .nav-links {
+          font-size: 1.2rem;
+      }
+  
+      .info {
+          font-size: 1.2rem;
+      }
+  
+      .common-btn {
+          font-size: 2.5rem;
+      }
+  
+      #next-btn,
+      #prev-btn,
+      #next-btn p,
+      #prev-btn p {
+          font-size: 3.5rem;
+      }
+  
+      /* Additional adjustments for screens up to 1400px wide */
+  }
+  
+  @media only screen and (max-width: 1300px) and (min-width:1199px) {
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns: 50% 50%;
+            }
+      .info, .btn, .image{
+            width: 36.5rem;
+      }
+      .header {
+          font-size: 1.3rem;
+      }
+      .info p{
+            font-size: 19px;
+      }
+      /* Additional adjustments for screens up to 1300px wide */
+  }
+  
+  @media only screen and (max-width: 1200px) and (min-width:1099px) {
+      .header {
+          font-size: 1.2rem;
+      }
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns: 50% 50%;
+            }
+      .info, .btn, .image{
+            width: 33rem;
+      }
+      .info p{
+            font-size: 17px;
+      }
+      /* Additional adjustments for screens up to 1200px wide */
+  }
+  
+  /* Continue adjusting styles for each media query */
+  @media only screen and (max-width: 1100px) and (min-width:999px){
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns: 50% 50%;
+            }
+      .info, .btn, .image{
+            width: 31rem;
+      }
+      .info p{
+            font-size: 17px;
+      }
+      /* Adjust styles for screens up to 1100px wide */
+  }
+  
+  @media only screen and (max-width: 1000px) and (min-width:899px) {
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns: 50% 50%;
+            }
+      .info, .btn, .image{
+            width: 27rem;
+      }
+      .info p{
+            font-size: 16px;
+      }
+      /* Adjust styles for screens up to 1000px wide */
+  }
+  
+  @media only screen and (max-width: 900px) and (min-width:799px){
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns: 50% 50%;
+            }
+      .info, .btn, .image{
+            width: 25rem;
+      }
+      .info p{
+            font-size: 15px;
+      }
+      /* Adjust styles for screens up to 900px wide */
+  }
+  
+  @media only screen and (max-width: 800px) and (min-width:699px){
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns:  5% 90% 5%;
+      }
+      .image{
+            grid-row: 1 / 5;
+      }
+      .info{
+            grid-row: 5 / 9;
+      }
+      .btn{
+            grid-row: 9 / 11;
+      }
+      .info, .btn, .image{
+            width: 42rem;
+            grid-column: 2 / 3;
+      }
+      .info p{
+            font-size: 13px;
+      }
+      .info h1{
+            font-size: 25px;
+      }
+      /* Adjust styles for screens up to 800px wide */
+  }
+  
+  @media only screen and (max-width: 700px) and (min-width:599px){
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns:  5% 90% 5%;
+      }
+      .image{
+            grid-row: 1 / 5;
+      }
+      .info{
+            grid-row: 5 / 9;
+      }
+      .btn{
+            grid-row: 9 / 11;
+      }
+      .info, .btn, .image{
+            width: 37rem;
+            grid-column: 2 / 3;
+      }
+      .info p{
+            font-size: 12.5px;
+      }
+      .info h1{
+            font-size: 20px;
+      }
+      /* Adjust styles for screens up to 700px wide */
+  }
+  
+  @media only screen and (max-width: 600px) and (min-width:499px) {
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns:  5% 90% 5%;
+      }
+      .image{
+            grid-row: 1 / 5;
+      }
+      .info{
+            grid-row: 5 / 9;
+      }
+      .btn{
+            grid-row: 9 / 11;
+      }
+      .info, .btn, .image{
+            width: 32rem;
+            grid-column: 2 / 3;
+      }
+      .info p{
+            font-size: 11px;
+      }
+      .info h1{
+            font-size: 18px;
+      }
+      /* Adjust styles for screens up to 600px wide */
+  }
+  
+  @media only screen and (max-width: 500px) and (min-width:399px) {
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns:  5% 90% 5%;
+      }
+      .image{
+            grid-row: 1 / 5;
+      }
+      .info{
+            grid-row: 5 / 9;
+      }
+      .btn{
+            grid-row: 9 / 11;
+      }
+      .info, .btn, .image{
+            width: 25.5rem;
+            grid-column: 2 / 3;
+      }
+      .info p{
+            font-size: 11px;
+      }
+      .info h1{
+            font-size: 18px;
+      }
+      #next-btn p, #prev-btn p{
+            font-size:1rem;
+      }
+      #next-btn:hover, #prev-btn:hover p{
+            font-size: 1.5rem;
+        }
+      /* Adjust styles for screens up to 500px wide */
+  }
+  
+  @media only screen and (max-width: 400px) and (min-width:299px){
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns:  5% 90% 5%;
+      }
+      .image{
+            grid-row: 1 / 5;
+      }
+      .info{
+            grid-row: 5 / 9;
+      }
+      .btn{
+            grid-row: 9 / 11;
+      }
+      .info, .btn, .image{
+            width: 26rem;
+            grid-column: 2 / 3;
+      }
+      .info p{
+            font-size: 11px;
+      }
+      .info h1{
+            font-size: 15px;
+      }
+      #next-btn p, #prev-btn p{
+            font-size:1rem;
+      }
+      #next-btn:hover, #prev-btn:hover p{
+            font-size: 1.5rem;
+        }
+      /* Adjust styles for screens up to 400px wide */
+  }
+  
+  @media only screen and (max-width: 300px) and (min-width:199px) {
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns:  5% 90% 5%;
+      }
+      .image{
+            grid-row: 1 / 5;
+      }
+      .info{
+            grid-row: 5 / 9;
+      }
+      .btn{
+            grid-row: 9 / 11;
+      }
+      .info, .btn, .image{
+            width: 26rem;
+            grid-column: 2 / 3;
+      }
+      .info p{
+            font-size: 11px;
+      }
+      .info h1{
+            font-size: 15px;
+      }
+      #next-btn p, #prev-btn p{
+            font-size:1rem;
+      }
+      #next-btn:hover, #prev-btn:hover p{
+            font-size: 1.5rem;
+        }
+      /* Adjust styles for screens up to 300px wide */
+  }
+  
+  @media only screen and (max-width: 200px)  and (min-width:99px) {
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns:  5% 90% 5%;
+      }
+      .image{
+            grid-row: 1 / 5;
+      }
+      .info{
+            grid-row: 5 / 9;
+      }
+      .btn{
+            grid-row: 9 / 11;
+      }
+      .info, .btn, .image{
+            width: 26rem;
+            grid-column: 2 / 3;
+      }
+      .info p{
+            font-size: 11px;
+      }
+      .info h1{
+            font-size: 15px;
+      }
+      #next-btn p, #prev-btn p{
+            font-size:1rem;
+      }
+      #next-btn:hover, #prev-btn:hover p{
+            font-size: 1.5rem;
+        }
+      /* Adjust styles for screens up to 200px wide */
+  }
+  
+  @media only screen and (max-width: 100px) and (min-width:0px){
+      .carousel-item{
+            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-columns:  5% 90% 5%;
+      }
+      .image{
+            grid-row: 1 / 5;
+      }
+      .info{
+            grid-row: 5 / 9;
+      }
+      .btn{
+            grid-row: 9 / 11;
+      }
+      .info, .btn, .image{
+            width: 26rem;
+            grid-column: 2 / 3;
+      }
+      .info p{
+            font-size: 11px;
+      }
+      .info h1{
+            font-size: 15px;
+      }
+      #next-btn p, #prev-btn p{
+            font-size:1rem;
+      }
+      #next-btn:hover, #prev-btn:hover p{
+            font-size: 1.5rem;
+        }
+      /* Adjust styles for screens up to 100px wide */
+  }

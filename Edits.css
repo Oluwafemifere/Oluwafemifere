@@ -1,0 +1,257 @@
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+a{
+    text-decoration: none;
+}
+#bgVid {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/* Set the width and height of the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+  
+/* Track (the area behind the thumb) */
+  ::-webkit-scrollbar-track {
+    background-color: rgb(242, 242, 242, 0.3);
+}
+  
+  /* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color:darkred;
+    border-radius: 6px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: red;
+    box-shadow: 0 0 10px  rgba(85, 85, 85, 0.8);
+}
+  
+#navbar {
+    color: #fff;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#navbar a {
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.a-contain{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.0);
+    border-radius: 30px;
+    filter:drop-shadow(5px 5px 3px black);
+}
+.a-contain:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#navbar a:last-child {
+    border-bottom: none;
+}
+.a-contain:active .nav-icon{
+    width:40px;
+    height: 40px;
+}
+.nav-icon{
+    width:50px;
+    height: 50px;
+    filter:invert(1);
+    transition: width 0.4s ease-in;
+}
+.nav-icon:hover{
+    width:65px;
+}
+.nav-icon:active {
+    width: 10px;
+}
+.openNav{
+    cursor:pointer;
+    position: relative;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    filter:drop-shadow(5px 5px 3px black);
+}
+.openNav img{
+    filter:invert(1);
+}
+.open-btn{
+    text-align: center;
+}
+.header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    bottom:10px;
+}
+.container{
+    display: flex;
+    transition: margin-left 0.5s;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+#head h1{
+    font-size: 3rem;
+    text-align: center;
+    color:white;
+    text-shadow: 5px 5px 3px black;
+
+}
+#head img{
+    width:60px;
+    border-radius: 50%;
+    position: relative;
+    top:10px;
+    margin-right: 10px;
+    filter:drop-shadow(5px 5px 3px black);
+    transition: filter 0.5s ease-in-out;
+}
+#head img:hover{
+    filter: invert(1);
+}
+.content{
+    border-radius: 50px;
+    backface-visibility: visible;
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 3rem;
+}
+.edit a p{
+    color:white;
+    text-shadow: 5px 5px 3px black;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 30px;
+    text-align: center;
+}
+.edit a:hover img{
+    border-radius: 50%;
+}
+.edit a{
+    filter:drop-shadow(5px 5px 3px black);
+}
+.footer{
+    background-color: gray;
+    text-align: center;
+}
+.edit a img{
+    width:100%;
+    border-radius: 30px;
+    filter:drop-shadow(5px 5px 3px black);
+    transition: border-radius 0.5s ease-in-out;
+}
+@media only screen and (max-width: 900px) and (min-width: 800px){
+    .content{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        padding: 3rem;
+    }
+}
+@media only screen and (max-width: 800px) and (min-width: 700px){
+    .content{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        padding: 3rem;
+    }
+
+}
+@media only screen and (max-width: 700px) and (min-width: 600px){
+    .content{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 3rem;
+    }
+}
+  
+@media only screen and (max-width: 600px) and (min-width: 500px){
+    .content{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 3rem;
+    }
+}
+@media only screen and (max-width: 500px) and (min-width: 400px){
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        padding: 3rem;
+    }
+}
+@media only screen and (max-width: 400px) and (min-width: 300px){
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        padding: 3rem;
+    }
+}
+@media only screen and (max-width: 300px) and (min-width: 200px){
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+    #head h1{
+        font-size:2rem;
+    }
+
+}
+@media only screen and (max-width: 200px) and (min-width: 100px){
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0rem;
+        padding: 0rem;
+    }
+    #head h1{
+        font-size:2rem;
+    }
+    .edit a p{
+        font-size: 1rem;
+    }
+
+}
+@media only screen and (max-width: 100px) and (min-width: 0px){
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0rem;
+        padding: 0rem;
+    }
+    #head h1{
+        font-size:2rem;
+    }
+    .edit a p{
+        font-size: 1rem;
+    }
+}
