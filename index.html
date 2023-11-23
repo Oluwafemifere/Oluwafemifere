@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign-Up</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <!-- Background Video -->
+    <video src="Bg Video.mp4" id="bgVid" autoplay muted loop></video>
+    <nav class="nav">
+        <a href="#" class="nav-1 activeNav">Account</a>
+        <a href="Home page.html" class="nav-2">Home</a>
+        <a href="Clips page.html" class="nav-3">Clips</a>
+        <a href="Edits.html" class="nav-4">Edits</a>
+        <a href="Store.html" class="nav-5">Store</a>
+    </nav>
+    <!-- Login Section -->
+    <section class="login-box">
+        <!-- Side 1: Welcome Message and Logo -->
+        <div class="side1">
+            <h1 id="text1">Welcome to Moeru's Editing Pack</h1>
+            <p id="text2">Moeru</p>
+            <img src="Logo.png" alt="Logo" id="logo">
+        </div>
+
+        <!-- Side 2 and Side 3: Login and Sign-Up Forms -->
+        <div class="carousel-container">
+            <!-- Side 2: Login Form -->
+            <div class="side2 carousel-item active">
+                <!-- Login Button -->
+                <div class="log">
+                    <p><button onClick="changeText('Log in')" id="Log-Text">Log in</button></p>
+                </div>
+                <!-- Email Input -->
+                <label for="Email">Email <img src="Email-icon.png" alt="-" id="M-icon"></label>
+                <br>
+                <input type="email" name="Email" id="loginEmail" placeholder="Enter Email...">
+                <br>
+                <!-- Password Input -->
+                <label for="Pass">Password <img src="Pass-Icon.png" alt="-" id="P-icon"></label>
+                <br>
+                <input type="password" name="Pass" id="loginPassword" placeholder="Enter Password...">
+                <br>
+                <!-- Continue Button -->
+                <button id="Cont" onclick="login()">Continue</button>
+            </div>
+
+            <!-- Side 3: Sign-Up Form -->
+            <div class="side3 carousel-item">
+                <!-- Sign-Up Button -->
+                <div class="Sign">
+                    <p><button onClick="changeText('Sign-Up')" id="Log-Text">Sign-Up</button></p>
+                </div>
+                <!-- Username Input -->
+                <label for="User">Username<img src="Email-icon.png" alt="-" id="U-icon"></label>
+                <br>
+                <input type="text" name="User" id="signupUsername" placeholder="Enter Username...">
+                <br>
+                <!-- Email Input -->
+                <label for="Email2">Email <img src="Email-icon.png" alt="-" id="M-icon"></label>
+                <br>
+                <input type="email" name="Email2" id="signupEmail" placeholder="Enter Email...">
+                <br>
+                <!-- Password Input -->
+                <label for="Pass2">Password <img src="Pass-Icon.png" alt="-" id="P-icon"></label>
+                <br>
+                <input type="password" name="Pass2" id="signupPassword" placeholder="Enter Password...">
+                <br>
+                <!-- Confirm Password Input -->
+                <label for="ConfirmPass">Confirm Password <img src="Pass-Icon.png" alt="-" id="P-icon"></label>
+                <br>
+                <input type="password" name="ConfirmPass" id="confirmPassword" placeholder="Confirm Password...">
+                <br>
+                <!-- Continue Button -->
+                <button id="Cont2" onclick="signup()">Continue</button>
+            </div>
+        </div>
+    </section>
+    <div id="messageBubble" class="message-bubble">
+        Tap here to switch
+    </div>
+    <script src="Main.js"></script>
+</body>
+</html>
